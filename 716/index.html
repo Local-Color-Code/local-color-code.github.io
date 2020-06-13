@@ -81,8 +81,8 @@
   var renderEverything = function () {
     var rowsHtml = '';
     
-    for (var i = 0; i < list.length; i++) {
-      rowsHtml += list[i].render();
+    for (var i = 0; i < colorCoded.length; i++) {
+      rowsHtml += colorCoded[i].render();
     }
     
     var tableBody = document.getElementById('ColorCodeList');
