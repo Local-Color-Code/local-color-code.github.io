@@ -8,4 +8,4 @@ If you would like to contribute to this effort, either open an issue with your s
 
 ## Area Codes
 
- - (716 - Buffalo, Niagara Falls, and surrounding areas)[/716]
+ - [716 - Buffalo, Niagara Falls, and surrounding areas](/716)
