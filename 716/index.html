@@ -74,12 +74,12 @@
 		}
 	};
 
-		var colorCoded = [
-			colorCoder.create('Nakiea Cook, MBA').withType('Accountant').withAddress('N/A').withContact('info@nakieacook.com').withSite('https://www.nakieacook.com/').withSocial('https://www.facebook.com/nakiea.adger')
-		];
+	var colorCoded = [
+		colorCoder.create('Nakiea Cook, MBA').withType('Accountant').withAddress('N/A').withContact('info@nakieacook.com').withSite('https://www.nakieacook.com/').withSocial('https://www.facebook.com/nakiea.adger')
+	];
 		
-     var renderEverything = (function () {
-
+	var renderEverything = (function () {
+	
 		
 		var rowsHtml = '';
 		
@@ -87,13 +87,11 @@
 			rowsHtml += list[i].render();
 		}
 		
-         var tableBody = document.getElementById('ColorCodeList');
-         tableBody.innerHTML = rowsHtml;
-		 
-     }
-	 
-	 renderEverything();
-	 
-	 )();
+		var tableBody = document.getElementById('ColorCodeList');
+		tableBody.innerHTML = rowsHtml;
+		
+	};
+	
+	renderEverything();
 
  </script>
