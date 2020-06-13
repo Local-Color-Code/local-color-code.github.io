@@ -3,95 +3,93 @@
 <h2>Buffalo, Niagara Falls, and the surrounding area</h1> 
 
 <table>
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Domain</th>
-			<th>Address</th>
-			<th>Contact</th>
-			<th>Site</th>
-			<th>Social</th>
-		</tr>
-	</thead>
-	<tbody id="ColorCodeList">
-	</tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Domain</th>
+      <th>Address</th>
+      <th>Contact</th>
+      <th>Site</th>
+      <th>Social</th>
+    </tr>
+  </thead>
+  <tbody id="ColorCodeList">
+  </tbody>
 </table>
 
  <script>
 
-	var colorCoder = {
-		create: function (name) {
-			var instance = {
-				name: name,
-				domain: 'N/A',
-				address: 'N/A',
-				contact: 'N/A',
-				site: 'N/A',
-				social: 'N/A'
-			};
-			
-			var replaceWithProperty = function (text, key) {
-				var value = instance[key];
-				return text.replace('{' + key + '}', value);
-			}
-			
-			instance.render = function () {
-			    var rowHtml = '<tr><td>{name}</td><td>{domain}</td><td>{address}</td><td>{contact}</td><td>{site}</td><td>{social}</td></tr>';
-				rowHtml = replaceWithProperty(rowHtml, 'name'); 
-				rowHtml = replaceWithProperty(rowHtml, 'domain'); 
-				rowHtml = replaceWithProperty(rowHtml, 'address'); 
-				rowHtml = replaceWithProperty(rowHtml, 'contact'); 
-				rowHtml = replaceWithProperty(rowHtml, 'site'); 
-				rowHtml = replaceWithProperty(rowHtml, 'social'); 
-			};
-			
-			instance.withType = function (domain) {
-				instance.domain = domain;
-				return instance;
-			};
-			
-			instance.withAddress = function (address) {
-				instance.address = address;
-				return instance;
-			};
-			
-			instance.withContact = function (contact) {
-				instance.contact = contact;
-				return instance;
-			};
-			
-			instance.withSite = function (site) {
-				instance.site = site;
-				return instance;
-			};
-			
-			instance.withSocial = function (social) {
-				instance.social = social;
-				return instance;
-			};
-			
-			return instance;
-		}
-	};
+  var colorCoder = {
+    create: function (name) {
+      var instance = {
+        name: name,
+        domain: 'N/A',
+        address: 'N/A',
+        contact: 'N/A',
+        site: 'N/A',
+        social: 'N/A'
+      };
+      
+      var replaceWithProperty = function (text, key) {
+        var value = instance[key];
+        return text.replace('{' + key + '}', value);
+      }
+      
+      instance.render = function () {
+          var rowHtml = '<tr><td>{name}</td><td>{domain}</td><td>{address}</td><td>{contact}</td><td>{site}</td><td>{social}</td></tr>';
+        rowHtml = replaceWithProperty(rowHtml, 'name'); 
+        rowHtml = replaceWithProperty(rowHtml, 'domain'); 
+        rowHtml = replaceWithProperty(rowHtml, 'address'); 
+        rowHtml = replaceWithProperty(rowHtml, 'contact'); 
+        rowHtml = replaceWithProperty(rowHtml, 'site'); 
+        rowHtml = replaceWithProperty(rowHtml, 'social'); 
+      };
+      
+      instance.withType = function (domain) {
+        instance.domain = domain;
+        return instance;
+      };
+      
+      instance.withAddress = function (address) {
+        instance.address = address;
+        return instance;
+      };
+      
+      instance.withContact = function (contact) {
+        instance.contact = contact;
+        return instance;
+      };
+      
+      instance.withSite = function (site) {
+        instance.site = site;
+        return instance;
+      };
+      
+      instance.withSocial = function (social) {
+        instance.social = social;
+        return instance;
+      };
+      
+      return instance;
+    }
+  };
 
-	var colorCoded = [
-		colorCoder.create('Nakiea Cook, MBA').withType('Accountant').withAddress('N/A').withContact('info@nakieacook.com').withSite('https://www.nakieacook.com/').withSocial('https://www.facebook.com/nakiea.adger')
-	];
-		
-	var renderEverything = (function () {
-	
-		
-		var rowsHtml = '';
-		
-		for (var i = 0; i < list.length; i++) {
-			rowsHtml += list[i].render();
-		}
-		
-		var tableBody = document.getElementById('ColorCodeList');
-		tableBody.innerHTML = rowsHtml;
-		
-	};
-	
-	renderEverything();
+  var colorCoded = [
+    colorCoder.create('Nakiea Cook, MBA').withType('Accountant').withAddress('N/A').withContact('info@nakieacook.com').withSite('https://www.nakieacook.com/').withSocial('https://www.facebook.com/nakiea.adger')
+  ];
+    
+  var renderEverything = function () {
+    var rowsHtml = '';
+    
+    for (var i = 0; i < list.length; i++) {
+      rowsHtml += list[i].render();
+    }
+    
+    var tableBody = document.getElementById('ColorCodeList');
+    tableBody.innerHTML = rowsHtml;
+    
+  };
+  
+  renderEverything();
 
  </script>
