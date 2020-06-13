@@ -1,4 +1,4 @@
-{% include head.html %}
+{% include_relative head.html %}
 
 <h1>716 Black Businesses</h1>
 
