@@ -36,7 +36,7 @@
       }
       
       instance.render = function () {
-          var rowHtml = '<tr><td>{name}</td><td>{domain}</td><td>{address}</td><td>{contact}</td><td>{site}</td><td>{social}</td></tr>';
+        var rowHtml = '<tr><td>{name}</td><td>{domain}</td><td>{address}</td><td>{contact}</td><td>{site}</td><td>{social}</td></tr>';
         rowHtml = replaceWithProperty(rowHtml, 'name'); 
         rowHtml = replaceWithProperty(rowHtml, 'domain'); 
         rowHtml = replaceWithProperty(rowHtml, 'address'); 
@@ -82,7 +82,7 @@
     var rowsHtml = '';
     
     for (var i = 0; i < colorCoded.length; i++) {
-      rowsHtml += colorCoded[i].render();
+      rowsHtml = rowsHtml + colorCoded[i].render();
     }
     
     var tableBody = document.getElementById('ColorCodeList');
