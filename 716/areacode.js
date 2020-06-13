@@ -97,7 +97,7 @@ colorCode.make("Addo Productions").domain("Photophy/Videography").address("N/A")
 colorCode.make("AWR Studios").domain("Photophy/Videography").address("N/A").contact("(716) 666-1460").site("https://www.instagram.com/awrstudios/").social("https://www.facebook.com/AWRbooking/");	
 colorCode.make("What's Pop-In").domain("Popcorn").address("418 W Ferry St, Buffalo, NY 14213").site("https://www.whatspoppingourmetpopcorn.com/");	
 colorCode.make("Get Fokus'd Productions").domain("Production Company").address("N/A").contact("(716) 427-4386").site("https://www.getfokusdproductions.com/").social("https://www.facebook.com/GetFokusdProductions/");	
-colorCode.make("Latrice "Lari" Everett").domain("Real Estate").address("N/A").contact("(585) 297-0536").site("https://leverett.mjpeterson.com/").social("N/A");	
+colorCode.make("Latrice \"Lari\" Everett").domain("Real Estate").address("N/A").contact("(585) 297-0536").site("https://leverett.mjpeterson.com/").social("N/A");	
 colorCode.make("At Eleven Wings").domain("Restaurant").address("3225 Main St Buffalo, New York 14214").contact("(716) 899-2011").site("N/A").social("https://www.facebook.com/atelevenwingsandcuisines/");	
 colorCode.make("Brothers Takeout Cafe & Catering").domain("Restaurant").address("1281 Hertel Ave Buffalo, NY 14216").contact("(716) 322-0084").site("https://716brothers.com/").social("https://www.facebook.com/716brothers/");	
 colorCode.make("Buffalo Soul").domain("Restaurant").address("454 Pearl St Buffalo, New York 14202").contact("(716) 768-8549").site("https://buffalosoulny.com/").social("https://www.facebook.com/buffalosoulcatering/?hc_location=ufi");	
