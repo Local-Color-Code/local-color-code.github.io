@@ -1,9 +1,4 @@
----
-title: 716 Black Businesses
-customjs:
- - /colorcode.js
- - /716/areacode.js
----
+{% include head.html %}
 
 <h1>716 Black Businesses</h1>
 
@@ -13,6 +8,4 @@ customjs:
   <b>Loading...</b>
 </div>
 
-<script>
-  colorCode.render();
-</script>
+{% include foot.html %}
