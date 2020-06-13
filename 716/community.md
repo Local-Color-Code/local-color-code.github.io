@@ -2,7 +2,6 @@
 
 <h2>Communities and Organizations to Support</h2>
 
-<hr/>
 Make sure to follow That Brown Bag on Facebook/IG, they also regularly share local black buffalo businesses!				
 
 <hr/>		
