@@ -1,4 +1,4 @@
-{% include _head.html %}
+{% include head.html %}
 
 <h1>716 Black Businesses</h1>
 
@@ -9,4 +9,4 @@
 </div>
 
 
-{% include _foot.html %}
+{% include foot.html %}
