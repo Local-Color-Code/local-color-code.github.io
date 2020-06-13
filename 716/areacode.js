@@ -12,7 +12,7 @@ colorCode.make("The Jalen Law Collection").domain("Art").address("N/A").contact(
 colorCode.make("The Knotty Buffalo").domain("Arts & Crafts Store").address("N/A").contact("(716) 949-6204").site("https://knottybuffalo.com/").social("https://www.facebook.com/knottybuffalo716/");	
 colorCode.make("Crystal J. Rodriguez, Esq.").domain("Attorney").address("N/A").contact("(716) 416-1888").site("https://crystalrodriguezesq.com/").social("https://www.facebook.com/crystalclearesq/");	
 colorCode.make("Main Hand Wash & Detail").domain("Auto Shop").address("1712 Main St, Buffalo, NY 14209").contact("(716) 885-2195").site("https://main-handwash-detail.hub.biz/").social("https://www.facebook.com/pages/Main-Handwash-Detail/162175203807747");	
-colorCode.make("350 Sweets & Treats").domain("Bakery").address("Stockbridge Ave, Buffalo, NY 14215").contact("(716) 715-4789").social(https://www.facebook.com/350SweetsTreats/);	
+colorCode.make("350 Sweets & Treats").domain("Bakery").address("Stockbridge Ave, Buffalo, NY 14215").contact("(716) 715-4789").social("https://www.facebook.com/350SweetsTreats/");	
 colorCode.make("Cake Crazy Bakery").domain("Bakery").address("2525 William St Cheektowaga, New York 14206").contact("(716) 235-8002").site("http://www.cakecrazybakery.com/").social("https://www.facebook.com/cakecrazybakery/");	
 colorCode.make("Ravelle Culinary Creations, LLC").domain("Bakery").address("37 Chandler Street, Buffalo, NY 14207").contact("(716) 880-6545").site("http://www.ravelleculinarycreations.com/").social("https://www.facebook.com/ravelle.co/");	
 colorCode.make("Shorty's Sweet Spot").domain("Bakery").address("N/A").contact("716) 430-7969").site("N/A").social("https://www.facebook.com/BuffalosCheesecakeGoddess/");	
@@ -135,6 +135,3 @@ colorCode.make("Good Form Fitness").domain("Trainer").address("N/A").contact("(7
 colorCode.make("716 Towing & Roadside").domain("Towing").address("N/A").contact("(716) 229-0412").site("https://716towingandroadside.com/").social("https://www.facebook.com/Towaholic1/");	
 colorCode.make("The Wigtique").domain("Wigs").address("N/A").contact("N/A").site("https://www.thewigtique.com/").social("N/A");	
 colorCode.make("Mind Body Flow Yoga").domain("Yoga Studio").address("9380 Transit Road East Amherst, NY 14051").contact("(716) 218-3167").site("https://mindbodyflowyoga.com/");	
-
-// NECESSARY CALL
-colorCode.render();
