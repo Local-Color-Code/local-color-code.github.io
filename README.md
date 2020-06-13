@@ -1,3 +1,11 @@
+## Welcome to Local Color Code
+
+This site is dedicated to calling out black owned businesses in all localities. Businesses are organized by area code pages.
+
+## Contributing
+
+If you would like to contribute to this effort, either open an issue with your suggestion or open a pull request with your change.
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/Local-Color-Code/Local-Color-Code/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
