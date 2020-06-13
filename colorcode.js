@@ -69,7 +69,7 @@ colorCode.make = colorCode.make || function (name) {
       return instance;
     };
 	
-	colorCode.businesses.add(instance);
+    colorCode.businesses.push(instance);
     
     return instance;
 };
