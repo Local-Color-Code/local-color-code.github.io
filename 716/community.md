@@ -23,13 +23,14 @@ Organizes at the intersections of embodied leadership, healing justice, politica
 <br />			
 https://www.blackloveresistsintherust.org/home				
 				
+<hr/>			
 <h3>Feed Buffalo</h3>			
 Healthy and halal Buffalo food pantry that aims to heal, educate, and transform food deserts into thriving communities	
 <br />			
 https://www.feedbuffalo.org/				
 				
 <hr/>
-<h3>National Federation For Just Communities				
+<h3>National Federation For Just Communities</h3>			
 Human relations organization dedicated to overcoming racism, bias and discrimination by building understanding, respect and trust through education, advocacy and community involvement	
 <br />			
 http://nfjcwny.org/				
