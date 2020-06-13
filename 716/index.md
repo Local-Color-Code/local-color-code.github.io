@@ -9,4 +9,4 @@
 </div>
 
 
-{% include _head.html %}
+{% include _foot.html %}
