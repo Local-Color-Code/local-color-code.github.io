@@ -1,1 +1,15 @@
+---
+title: 716 Black Businesses
+customjs:
+ - /colorcode.js
+ - /716/areacode.js
+ - /finalizecode.js
+---
 
+<h1>716 Black Businesses</h1>
+
+<h2>Buffalo, Niagara Falls, and the surrounding area</h1> 
+
+<div id="ColorCode">
+  <b>Loading...</b>
+</div>
