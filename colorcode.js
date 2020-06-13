@@ -1,5 +1,5 @@
 
-var colorCode = colorCode || {};
+var colorCode = colorCode || { businesses: [] };
 
 colorCode.htmlBasis = colorCode.htmlBasis || '<table>'
 + '  <thead>'
@@ -68,14 +68,16 @@ colorCode.make = colorCode.make || function (name) {
       instance.social = social;
       return instance;
     };
+	
+	colorCode.businesses.add(instance);
     
     return instance;
 };
 
 colorCode.render = colorCode.render || function () {
     var rowsHtml = '';
-    for (var i = 0; i < colorCoded.length; i++) {
-      rowsHtml = rowsHtml.concat(colorCoded[i].render());
+    for (var i = 0; i < colorCode.businesses.length; i++) {
+      rowsHtml = rowsHtml.concat(colorCode.businesses[i].render());
     }
     
 	html = colorCode.htmlBasis.replace('{list}', rowsHtml);
