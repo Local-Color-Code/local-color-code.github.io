@@ -62,7 +62,7 @@ colorCode.make = colorCode.make || function (name) {
     
     instance.site = function (site) {
 	  if (contains(site, "http")) {
-	    social = '<a href="' + social + '" target="_blank">Website</a>
+	    social = '<a href="' + social + '" target="_blank">Website</a>';
 	  }
       instance.site = site;
       return instance;
@@ -71,10 +71,10 @@ colorCode.make = colorCode.make || function (name) {
     
     instance.social = function (social) {
 	  if (contains(social,'fb.co') || contains(social,'facebook.co')) {
-	    social = '<a href="' + social + '" target="_blank">Facebook</a>
+	    social = '<a href="' + social + '" target="_blank">Facebook</a>';
 	  }
 	  if (contains(social,'ig.co') || contains(social,'instagram.co')) {
-	    social = '<a href="' + social + '" target="_blank">Instagram</a>
+	    social = '<a href="' + social + '" target="_blank">Instagram</a>';
 	  }
       instance.social = social;
       return instance;
