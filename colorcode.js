@@ -97,7 +97,7 @@ colorCode.make = colorCode.make || function (name) {
       return instance;
     };
     
-    instance.social = function (social) 
+    instance.social = function (social) {
 	  social = checkEmpty(social);
 	  if (contains(social,'fb.co') || contains(social, 'facebook.co')) {
 	    social = '<a href="' + social + '" target="_blank">Facebook</a>';
