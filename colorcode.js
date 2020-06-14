@@ -1,4 +1,3 @@
-
 var colorCode = colorCode || { businesses: [] };
 
 colorCode.htmlBasis = colorCode.htmlBasis || '<table>'
@@ -8,8 +7,7 @@ colorCode.htmlBasis = colorCode.htmlBasis || '<table>'
 + '      <th>Domain</th>'
 + '      <th>Address</th>'
 + '      <th>Contact</th>'
-+ '      <th>Site</th>'
-+ '      <th>Social</th>'
++ '      <th></th>'
 + '    </tr>'
 + '  </thead>'
 + '  <tbody>'
@@ -23,9 +21,13 @@ colorCode.make = colorCode.make || function (name) {
       domain: 'N/A',
       address: 'N/A',
       contact: 'N/A',
-      site: 'N/A',
-      social: 'N/A'
+      site: '',
+      social: ''
     };
+	
+	var contains = function(text, search) {
+	  return text.toLowerCase().indexOf(search.toLowerCase()) > -1;
+	};
     
     var replaceWithProperty = function (text, key) {
       var value = instance[key];
@@ -33,7 +35,7 @@ colorCode.make = colorCode.make || function (name) {
     }
     
     instance.render = function () {
-      var rowHtml = '<tr><td>{name}</td><td>{domain}</td><td>{address}</td><td>{contact}</td><td>{site}</td><td>{social}</td></tr>';
+      var rowHtml = '<tr><td>{name}</td><td>{domain}</td><td>{address}</td><td>{contact}</td><td>{site}<br />{social}</td></tr>';
       rowHtml = replaceWithProperty(rowHtml, 'name'); 
       rowHtml = replaceWithProperty(rowHtml, 'domain'); 
       rowHtml = replaceWithProperty(rowHtml, 'address'); 
@@ -59,12 +61,21 @@ colorCode.make = colorCode.make || function (name) {
     };
     
     instance.site = function (site) {
+	  if (contains(site, "http")) {
+	    social = '<a href="' + social + '" target="_blank">Website</a>
+	  }
       instance.site = site;
       return instance;
 
     };
     
     instance.social = function (social) {
+	  if (contains(social,'fb.co') || contains(social,'facebook.co')) {
+	    social = '<a href="' + social + '" target="_blank">Facebook</a>
+	  }
+	  if (contains(social,'ig.co') || contains(social,'instagram.co')) {
+	    social = '<a href="' + social + '" target="_blank">Instagram</a>
+	  }
       instance.social = social;
       return instance;
     };
