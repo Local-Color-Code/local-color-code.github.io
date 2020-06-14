@@ -100,7 +100,7 @@ colorCode.make = colorCode.make || function (name) {
     instance.social = function (socialText) {
 	  socialText = checkEmpty(socialText);
 	  if (contains(socialText,'fb.co') || contains(socialText, 'facebook.co')) {
-	    socialText = '<a href="' + social + '" target="_blank">Facebook</a>';
+	    socialText = '<a href="' + socialText + '" target="_blank">Facebook</a>';
 	  }
 	  if (contains(socialText,'ig.co') || contains(socialText, 'instagram.co')) {
 	    socialText = '<a href="' + socialText + '" target="_blank">Instagram</a>';
