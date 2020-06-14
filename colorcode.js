@@ -4,9 +4,7 @@ colorCode.htmlBasis = colorCode.htmlBasis || '<table>'
 + '  <thead>'
 + '    <tr>'
 + '      <th>Name</th>'
-+ '      <th>Domain</th>'
-+ '      <th>Address</th>'
-+ '      <th>Contact</th>'
++ '      <th></th>'
 + '      <th></th>'
 + '    </tr>'
 + '  </thead>'
@@ -18,9 +16,9 @@ colorCode.htmlBasis = colorCode.htmlBasis || '<table>'
 colorCode.make = colorCode.make || function (name) {
     var instance = {
       name: name,
-      domain: 'N/A',
-      address: 'N/A',
-      contact: 'N/A',
+      domain: '',
+      address: '',
+      contact: '',
       site: '',
       social: ''
     };
@@ -35,38 +33,71 @@ colorCode.make = colorCode.make || function (name) {
     }
     
     instance.render = function () {
-      var rowHtml = '<tr><td>{name}</td><td>{domain}</td><td>{address}</td><td>{contact}</td><td>{site}<br />{social}</td></tr>';
+      var rowHtml = '<tr><td>{name}</td><td>{secondColumn}</td><td>{thirdColumn}</td></tr>';
+	  var secondColumn = '';
+	  
+	  if (instance.domain.length > 0) {
+		  secondColumn = secondColumn.concat(instance.domain, '<br />');
+	  }
+	  if (instance.address.length > 0) {
+		  secondColumn = secondColumn.concat(instance.address, '<br />');
+	  }
+	  if (instance.contact.length > 0) {
+		  secondColumn = secondColumn.concat(instance.contact);
+	  }
+	  
+	  var thirdColumn = '';
+
+	  if (instance.site.length > 0) {
+		  thirdColumn = thirdColumn.concat(instance.site, '<br />');
+	  }
+	  if (instance.social.length > 0) {
+		  thirdColumn = thirdColumn.concat(instance.social);
+	  }
+	  
       rowHtml = replaceWithProperty(rowHtml, 'name'); 
-      rowHtml = replaceWithProperty(rowHtml, 'domain'); 
-      rowHtml = replaceWithProperty(rowHtml, 'address'); 
-      rowHtml = replaceWithProperty(rowHtml, 'contact'); 
-      rowHtml = replaceWithProperty(rowHtml, 'site'); 
-      rowHtml = replaceWithProperty(rowHtml, 'social'); 
+      rowHtml = rowHtml.replace('{secondColumn}', secondColumn); 
+      rowHtml = rowHtml.replace('{thirdColumn}', thirdColumn); 
+	  
       return rowHtml;
     };
     
     instance.domain = function (domain) {
+		
+	  if (contains(domain, "n/a")) {
+	    domain = '';
+	  }
+	  
       instance.domain = domain;
       return instance;
     };
     
     instance.address = function (address) {
+		
+	  if (contains(address, "n/a")) {
+	    address = '';
+	  }
+	  
       instance.address = address;
       return instance;
     };
     
     instance.contact = function (contact) {
+		
+	  if (contains(contact, "n/a")) {
+	    contact = '';
+	  }
+	  
       instance.contact = contact;
       return instance;
     };
     
     instance.site = function (site) {
 	  if (contains(site, "http")) {
-	    social = '<a href="' + site + '" target="_blank">Website</a>';
+	    site = '<a href="' + site + '" target="_blank">Website</a>';
 	  }
       instance.site = site;
       return instance;
-
     };
     
     instance.social = function (social) {
