@@ -83,7 +83,7 @@ colorCode.make = colorCode.make || function (name) {
     };
     
     instance.contact = function (contactText) {
-	  contactText = checkEmpty(contact);
+	  contactText = checkEmpty(contactText);
       instance.contactText = contactText;
       return instance;
     };
