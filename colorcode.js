@@ -23,21 +23,21 @@ colorCode.make = colorCode.make || function (name) {
       social: ''
     };
 	
-	var contains = function(text, search) {
-	  return text.toLowerCase().indexOf(search.toLowerCase()) > -1;
+	var contains = function(stuff, search) {
+	  return stuff.toLowerCase().indexOf(search.toLowerCase()) > -1;
 	};
     
-    var replaceWithProperty = function (text, key) {
+    var replaceWithProperty = function (stuff, key) {
       var value = instance[key];
-      return text.replace('{' + key + '}', value);
+      return stuff.replace('{' + key + '}', value);
     };
 	
-	var checkEmpty = function (text) {
-		if (contains(text, "n/a")) {
+	var checkEmpty = function (stuff) {
+		if (contains(stuff, "n/a")) {
 			return '';
 		}
 		
-		return text;
+		return stuff;
 	};
     
     instance.render = function () {
