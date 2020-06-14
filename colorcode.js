@@ -30,7 +30,15 @@ colorCode.make = colorCode.make || function (name) {
     var replaceWithProperty = function (text, key) {
       var value = instance[key];
       return text.replace('{' + key + '}', value);
-    }
+    };
+	
+	var checkEmpty = function (text) {
+		if (contains(text, "n/a")) {
+			return '';
+		}
+		
+		return text;
+	};
     
     instance.render = function () {
       var rowHtml = '<tr><td>{name}</td><td>{secondColumn}</td><td>{thirdColumn}</td></tr>';
@@ -63,36 +71,25 @@ colorCode.make = colorCode.make || function (name) {
     };
     
     instance.domain = function (domain) {
-		
-	  if (contains(domain, "n/a")) {
-	    domain = '';
-	  }
-	  
+	  domain = checkEmpty(domain);
       instance.domain = domain;
       return instance;
     };
     
     instance.address = function (address) {
-		
-	  if (contains(address, "n/a")) {
-	    address = '';
-	  }
-	  
+	  address = checkEmpty(address);
       instance.address = address;
       return instance;
     };
     
     instance.contact = function (contact) {
-		
-	  if (contains(contact, "n/a")) {
-	    contact = '';
-	  }
-	  
+	  contact = checkEmpty(contact);
       instance.contact = contact;
       return instance;
     };
     
     instance.site = function (site) {
+	  site = checkEmpty(site);
 	  if (contains(site, "http")) {
 	    site = '<a href="' + site + '" target="_blank">Website</a>';
 	  }
@@ -100,11 +97,12 @@ colorCode.make = colorCode.make || function (name) {
       return instance;
     };
     
-    instance.social = function (social) {
-	  if (contains(social,'fb.co') || contains(social,'facebook.co')) {
+    instance.social = function (social) 
+	  social = checkEmpty(social);
+	  if (contains(social,'fb.co') || contains(social, 'facebook.co')) {
 	    social = '<a href="' + social + '" target="_blank">Facebook</a>';
 	  }
-	  if (contains(social,'ig.co') || contains(social,'instagram.co')) {
+	  if (contains(social,'ig.co') || contains(social, 'instagram.co')) {
 	    social = '<a href="' + social + '" target="_blank">Instagram</a>';
 	  }
       instance.social = social;
