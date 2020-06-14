@@ -62,7 +62,7 @@ colorCode.make = colorCode.make || function (name) {
     
     instance.site = function (site) {
 	  if (contains(site, "http")) {
-	    social = '<a href="' + social + '" target="_blank">Website</a>';
+	    social = '<a href="' + site + '" target="_blank">Website</a>';
 	  }
       instance.site = site;
       return instance;
