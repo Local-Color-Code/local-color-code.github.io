@@ -22,3 +22,4 @@ C:\Workspace\BetterTogether\local-color-code.github.io\content\DataSvc\obj\Debug
 C:\Workspace\BetterTogether\local-color-code.github.io\content\DataSvc\obj\Debug\netcoreapp3.1\DataSvc.csproj.CopyComplete
 C:\Workspace\BetterTogether\local-color-code.github.io\content\DataSvc\obj\Debug\netcoreapp3.1\DataSvc.dll
 C:\Workspace\BetterTogether\local-color-code.github.io\content\DataSvc\obj\Debug\netcoreapp3.1\DataSvc.pdb
+C:\Workspace\BetterTogether\local-color-code.github.io\content\DataSvc\bin\Debug\netcoreapp3.1\data\devBob.json

@@ -34,7 +34,8 @@
         {
 
           ajax: {
-            url: process.env.VUE_APP_ROOT_DATA_API + "Bob",
+            //url: process.env.VUE_APP_ROOT_DATA_API + "Bob",
+            url: "https://raw.githubusercontent.com/sksallaj82/local-color-code.github.io/master/content/DataSvc/data/devBob.json",
             type: "GET",
             dataSrc: function (jsonData) {
               return jsonData;
