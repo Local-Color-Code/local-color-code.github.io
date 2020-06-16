@@ -7,7 +7,6 @@
         <th>Address</th>
         <th>Contact</th>
         <th>Website</th>
-        <th>FB/IG</th>
       </tr>
     </thead>
   </table>
@@ -34,8 +33,7 @@
         {
 
           ajax: {
-            //url: process.env.VUE_APP_ROOT_DATA_API + "Bob",
-            url: "https://raw.githubusercontent.com/sksallaj82/local-color-code.github.io/master/content/DataSvc/data/devBob.json",
+            url: process.env.VUE_APP_FETCHDATA_ENDPOINT,
             type: "GET",
             dataSrc: function (jsonData) {
               return jsonData;
@@ -54,15 +52,21 @@
             { data: "Address" },
             { data: "Contact" },
             {
-              data: "Website",
+              data: null,
               render: function (data, type, row) {
-                  return "<a href='" + data + "'>Link</a>";
-              }
-            },
-            {
-              data: "FB",
-              render: function (data, type, row) {
-                  return "<a href='" + data + "'>Link</a>";
+                var html = []
+                if (row) {
+                  if (row.Website && row.Website.length !== 0) {
+                    html.push("<a href='" + row.Website + "'>Website</a>");
+                  }
+                  if (row.FB && row.Website.FB !== 0) {
+                    if (row.FB.includes('facebook'))
+                      html.push("<a href='" + row.FB + "'>Facebook</a>");
+                    if (row.FB.includes('instagram'))
+                      html.push("<a href='" + row.FB + "'>Instagram</a>");
+                  }
+                  return html.join("<br />");
+                }
               }
             }
           ],
