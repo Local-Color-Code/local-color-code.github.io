@@ -35,7 +35,8 @@ module.exports = {
         'event-source-polyfill',
         'jquery',
         'datatables.net-bs4/css/dataTables.bootstrap4.css',
-        'datatables.net-fixedheader-bs4/css/fixedHeader.bootstrap4.css'
+        'datatables.net-fixedheader-bs4/css/fixedHeader.bootstrap4.css',
+        'datatables.net-responsive-bs4/css/responsive.bootstrap4.css'
       ]
     },
     plugins: [

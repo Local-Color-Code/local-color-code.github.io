@@ -16,6 +16,7 @@
   import "bootstrap";
   import "datatables.net-bs4";
   import "datatables.net-fixedheader-bs4";
+  import "datatables.net-responsive-bs4";
 
   export default {
     components: {
@@ -50,28 +51,43 @@
             { data: "Name" },
             { data: "Business" },
             { data: "Address" },
-            { data: "Contact" },
             {
-              data: null,
+              data: "Contact",
+              render: function (data, type, row) {
+                if (data && data.length !== 0) {
+                  if (data.includes('@'))
+                    return "<a href='mailto:" + data + "'>" + data + "</a>";
+                  else {
+                    return "<a href='tel:" + data + "'>" + data + "</a>";
+                  }
+                }
+                return "";
+              }
+            },
+            {
+              data: 'Website',
               render: function (data, type, row) {
                 var html = []
-                if (row) {
-                  if (row.Website && row.Website.length !== 0) {
-                    html.push("<a href='" + row.Website + "'>Website</a>");
-                  }
-                  if (row.FB && row.Website.FB !== 0) {
-                    if (row.FB.includes('facebook'))
-                      html.push("<a href='" + row.FB + "'>Facebook</a>");
-                    if (row.FB.includes('instagram'))
-                      html.push("<a href='" + row.FB + "'>Instagram</a>");
-                  }
-                  return html.join("<br />");
+                if (row.Website && row.Website.length !== 0) {
+                  html.push("<a href='" + row.Website + "'>Website</a>");
                 }
+                if (row.FB && row.Website.FB !== 0) {
+                  if (row.FB.includes('facebook'))
+                    html.push("<a href='" + row.FB + "'>Facebook</a>");
+                  if (row.FB.includes('instagram'))
+                    html.push("<a href='" + row.FB + "'>Instagram</a>");
+                }
+                if (html.length !== 0)
+                  return html.join(" - ");
+                else
+                  return "";
               }
+              
             }
           ],
           filter: true,
           paginate: true,
+          responsive: true,
           ordering: true
         });
 
@@ -79,5 +95,8 @@
   };
 </script>
 <style>
+  table.dataTable.dtr-inline.collapsed.table-sm > tbody > tr > td:first-child:before, table.dataTable.dtr-inline.collapsed.table-sm > tbody > tr > th:first-child:before {
 
+      top: 15px !important;
+  }
 </style>
