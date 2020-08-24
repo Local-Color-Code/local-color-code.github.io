@@ -37,6 +37,7 @@
             url: process.env.VUE_APP_FETCHDATA_ENDPOINT,
             type: "GET",
             dataSrc: function (jsonData) {
+
               return jsonData;
             }
           },
@@ -52,16 +53,19 @@
             { data: "Business" },
             { data: "Address" },
             {
-              data: "Contact",
+              data: null,
               render: function (data, type, row) {
-                if (data && data.length !== 0) {
-                  if (data.includes('@'))
-                    return "<a href='mailto:" + data + "'>" + data + "</a>";
-                  else {
-                    return "<a href='tel:" + data + "'>" + data + "</a>";
-                  }
+                var html = []
+                if (row.Phone && row.Phone.lengt !== 0) {
+                  html.push("<a href='tel:" + row.Phone + "'>" + row.Phone + "</a>");
                 }
-                return "";
+                if (row.Email && row.Email.length !== 0) {
+                    html.push("<a href='mailto:" + row.Email + "'>" + row.Email + "</a>");
+                }
+                if (html.length !== 0)
+                  return html.join(" - ");
+                else
+                  return "";
               }
             },
             {
@@ -73,9 +77,9 @@
                 }
                 if (row.FB && row.Website.FB !== 0) {
                   if (row.FB.includes('facebook'))
-                    html.push("<a href='" + row.FB + "'>Facebook</a>");
+                    html.push("<a href='" + row.Facebook + "'>Facebook</a>");
                   if (row.FB.includes('instagram'))
-                    html.push("<a href='" + row.FB + "'>Instagram</a>");
+                    html.push("<a href='" + row.Instagram + "'>Instagram</a>");
                 }
                 if (html.length !== 0)
                   return html.join(" - ");
