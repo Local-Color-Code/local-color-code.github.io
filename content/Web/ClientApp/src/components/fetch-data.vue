@@ -37,8 +37,10 @@
             url: process.env.VUE_APP_FETCHDATA_ENDPOINT,
             type: "GET",
             dataSrc: function (jsonData) {
-
-              return jsonData;
+              if (jsonData.IsArray)
+                return jsonData;
+              else
+                return jsonData["Form Responses 2"];
             }
           },
           fixedHeader: true,
@@ -69,18 +71,15 @@
               }
             },
             {
-              data: 'Website',
+              data: null,
               render: function (data, type, row) {
                 var html = []
-                if (row.Website && row.Website.length !== 0) {
+                if (row.Website && row.Website.length !== 0)
                   html.push("<a href='" + row.Website + "'>Website</a>");
-                }
-                if (row.FB && row.Website.FB !== 0) {
-                  if (row.FB.includes('facebook'))
-                    html.push("<a href='" + row.Facebook + "'>Facebook</a>");
-                  if (row.FB.includes('instagram'))
+                if (row.Facebook && row.Facebook.length !== 0)
+                  html.push("<a href='" + row.Facebook + "'>Facebook</a>");
+                if (row.Instagram && row.Instagram.length !== 0)
                     html.push("<a href='" + row.Instagram + "'>Instagram</a>");
-                }
                 if (html.length !== 0)
                   return html.join(" - ");
                 else
